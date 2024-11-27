@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="personal.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" type="jpeg" href="./img/persol.png" />
+
+    <title>Gender Ledger</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <p>Add Employee Details</p>
+      </header>
+      <!-- content on tabs -->
+      <section class="tabs" id="tabs">
+        <a id="personal" href="index.html"
+          ><button type="button" class="btn">Personal</button></a
+        >
+        <a id="organizational" href="organizational.html"
+          ><button type="button" class="btn">Organizational</button>
+        </a>
+        <a id="payment-info" href="payment-info.html"
+          ><button type="button" class="btn">Payment Info</button>
+        </a>
+        <a id="other-info" href="other-info.html"
+          ><button type="button" class="btn">Other Info</button>
+        </a>
+        <a id="general-ledger" href="general-Ledger.html"
+          ><button type="button" class="btn active">General Ledger</button>
+        </a>
+      </section>
+      <!-- ends here -->
+      <div class="all-sections">
+        <!-- content on left side -->
+        <section class="personal-info-1-1">
+          <!-- line to bottom of this section -->
+          <div class="line-separation">
+            <p1>Regular</p1>
+          </div>
+          <!-- ends here -->
+          <!-- first div -->
+          <div class="containers">
+            <div class="container">
+              <label for="salarySearch">Salary</label>
+              <input
+                id="salarySearch"
+                class="searchbar"
+                type="search"
+                placeholder="Search GL"
+              />
+            </div>
+
+            <div class="container">
+              <label for="incomeTaxSearch">Income Tax</label>
+              <input
+                class="searchbar"
+                id="incomeTaxSearch"
+                type="search"
+                placeholder="Search GL"
+              />
+            </div>
+          </div>
+          <!-- ends here -->
+          <!-- second div -->
+          <div class="containers">
+            <div class="container">
+              <label for="netSalarySearch">Net Salary Payable </label>
+              <input
+                class="searchbar"
+                id="netSalaryPayableSearch"
+                type="search"
+                placeholder="Search GL"
+              />
+            </div>
+
+            <div class="container">
+              <label for="operatingOvertime">Operating Overtime</label>
+              <input
+                class="searchbar"
+                id="operatingOvertimeSearch"
+                type="search"
+                placeholder="Search GL"
+              />
+            </div>
+          </div>
+          <!-- ends here -->
+
+          <!-- third div -->
+          <div class="containers">
+            <div class="container">
+              <label for="shiftAllowanceSearch">Shift Allowance</label>
+              <input
+                class="searchbar"
+                id="shiftAllowanceSearch"
+                type="search"
+                placeholder="Search GL"
+              />
+            </div>
+
+            <div class="container">
+              <label for="taxReliefSearch">Tax Relief</label>
+              <input
+                class="searchbar"
+                id="taxReliefSearch"
+                type="search"
+                placeholder="Search GL"
+              />
+            </div>
+          </div>
+          <!-- ends here -->
+        </section>
+        <!-- ends here -->
+        <section class="personal-info-1-2">
+          <!-- sixth div -->
+          <div class="containers">
+            <div class="container">
+              <!-- line to bottom of this section -->
+              <div class="line-separation">
+                <p1>Mandatory</p1>
+              </div>
+            </div>
+            <!-- ends here -->
+            <div class="container">
+              <!-- line to bottom of this section -->
+              <div class="line-separation">
+                <p1>Voluntary</p1>
+              </div>
+            </div>
+          </div>
+
+          <!-- ends here -->
+          <!-- fourth div -->
+          <div class="containers">
+            <div class="container">
+              <label for="employeeContributionSearch"
+                >Employee Contribution GL</label
+              >
+              <input
+                class="searchbar"
+                id="employeeContributionSearch"
+                type="search"
+                placeholder="Search GL"
+              />
+            </div>
+
+            <div class="container">
+              <label for="employeeContributionSearch"
+                >Employee Contribution GL</label
+              >
+              <input
+                class="searchbar"
+                id="employeeContributionSearch2"
+                type="search"
+                placeholder="Search GL"
+              />
+            </div>
+          </div>
+          <!-- ends here -->
+          <!-- ends here -->
+
+          <!-- fifth div -->
+          <div class="containers">
+            <div class="container">
+              <label for="employerContributionSearch"
+                >Employer Contribution GL</label
+              >
+              <input
+                class="searchbar"
+                id="employerContributionSearch"
+                type="search"
+                placeholder="Search GL"
+              />
+            </div>
+
+            <div class="container">
+              <label for="employerContributionSearch"
+                >Employer Contribution GL</label
+              >
+              <input
+                class="searchbar"
+                id="employerContributionSearch2"
+                type="search"
+                placeholder="Search GL"
+              />
+            </div>
+          </div>
+          <!-- ends here -->
+
+          <!-- sixth div -->
+          <div class="containers">
+            <div class="container">
+              <label for="employerTotalSearch">Employer Total Payable</label>
+              <input
+                class="searchbar"
+                id="employerTotalSearch"
+                type="search"
+                placeholder="Search GL"
+              />
+            </div>
+
+            <div class="container">
+              <label for="employerTotalSearch">Employer Total Payable</label>
+              <input
+                class="searchbar"
+                id="employerTotalSearch2"
+                type="search"
+                placeholder="Search GL"
+              />
+            </div>
+          </div>
+          <!-- ends here -->
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="containers">
+        <p>
+          <i
+            >All fields marked with asterisk are required (
+            <i class="fa-solid fa-asterisk"></i>
+            )</i
+          >
+        </p>
+      </div>
+
+      <div class="buttons">
+        <button id="cancel" type="button">
+          <i class="fa-solid fa-xmark"></i> Cancel
+        </button>
+        <button id="reset" type="button">
+          <i class="fa-solid fa-rotate-right"></i> Reset
+        </button>
+        <button id="save" type="button">
+          <i class="fa-regular fa-floppy-disk"></i> Save
+        </button>
+      </div>
+    </footer>
+  </body>
+  <script src="general-Ledger.js"></script>
+</html>

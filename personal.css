@@ -1,0 +1,613 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none !important;
+  font-family: Arial, Helvetica, sans-serif;
+  justify-content: center;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3em;
+  width: 90%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media (max-width: 500px) {
+  html {
+    width: 38em;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
+  }
+  .btn {
+    width: 6.5em;
+  }
+  section.tabs {
+    gap: 1em !important;
+  }
+}
+header {
+  background-color: #315a76;
+  padding: 1em;
+  color: white;
+  text-align: left;
+}
+.btn {
+  border: none;
+  outline: none;
+  height: 3em;
+  border-radius: 5px 5px 0 0;
+  color: #0666d6;
+  background-color: white;
+  cursor: pointer;
+}
+.active,
+.btn:hover {
+  background-color: #ccc;
+  border-radius: 5px 5px 0 0;
+}
+.btn:active {
+  background-color: white !important;
+  border: 1px solid black;
+}
+section.tabs {
+  padding: 1em 0 0 0;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  width: 98%;
+  margin-left: 10px;
+  justify-content: start;
+}
+.personal-info-1,
+.personal-info-2 {
+  padding: 1em;
+  margin-top: 5px;
+}
+
+.all-sections {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 500px) {
+  .all-sections {
+    display: flex;
+    flex-direction: column;
+  }
+}
+footer {
+  margin-top: 10px;
+  padding: 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  flex-direction: column;
+}
+.personal-info-1 {
+  border-right: 1px solid rgba(0, 0, 0, 0.201);
+}
+@media (max-width: 500px) {
+  .containers {
+    grid-template-columns: 1fr !important;
+    width: 100%;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+  }
+  .seventh-containers {
+    display: flex;
+    flex-direction: column !important;
+  }
+  .checkbox {
+    display: flex;
+    flex-direction: column-reverse !important;
+    gap: 5px;
+  }
+}
+button {
+  width: 6em;
+  height: 2em;
+}
+.fa-asterisk {
+  color: red;
+  font-size: 10px;
+}
+.containers {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1em;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+@media (min-width: 520px) and (max-width: 767px) {
+  .containers {
+    display: flex;
+    flex-direction: column;
+  }
+  div#tableContainer {
+    height: 86vh;
+    overflow: overlay;
+  }
+  .personal-info-1-1,
+  .personal-info-1-2,
+  .personal-info-1,
+  .personal-info-2 {
+    width: 45vw !important;
+  }
+  select,
+  input {
+    width: 100% !important;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+  }
+  .checkboxes {
+    display: block !important;
+  }
+  .checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5em;
+    margin-left: 0 !important;
+  }
+  .seventh-containers {
+    display: flex;
+    flex-direction: column !important;
+  }
+  input#resident,
+  select#phone,
+  input#overtimeExempt {
+    width: 2em !important;
+    font-size: x-small;
+  }
+  select#notch,
+  select#salaryGrade {
+    width: 100% !important;
+  }
+}
+input#myFile {
+  width: 14.5em !important;
+  display: none;
+}
+select#phone,
+input#overtimeExempt,
+input#resident {
+  width: 1em;
+}
+input,
+select {
+  border: 1px solid rgba(0, 0, 0, 0.217);
+  border-radius: 3px;
+  padding-left: 0.5em;
+  width: 100%;
+  height: 2em;
+}
+
+@media (max-width: 500px) {
+  input,
+  select {
+    width: 100% !important;
+  }
+  select#phone,
+  input#overtimeExempt,
+  input#resident {
+    align-items: start;
+  }
+}
+#save,
+#cancel,
+#reset {
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#save {
+  background-color: #315a76;
+}
+#cancel {
+  background-color: #5b5b5b;
+}
+#reset {
+  background-color: #f9b115;
+}
+.line-separation {
+  text-align: center;
+}
+p1 {
+  padding: 5px;
+}
+.line-separation::before,
+.line-separation::after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.212);
+  margin: auto;
+  text-align: center;
+}
+.line-separation {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  margin: 1em 0 1em 0;
+}
+.seventh-containers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  gap: 5px;
+}
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.branch {
+  width: 27vw;
+}
+img {
+  width: 30px;
+  height: 20px;
+}
+.phone {
+  display: flex;
+  flex-direction: column;
+}
+.iti__selected-flag {
+  padding: 0 6px 0 2px !important;
+}
+.checkboxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.personal-info-1-1,
+.personal-info-1-2 {
+  height: 40vh;
+  padding: 0 1em 0 01em;
+}
+.personal-info-1-1 {
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+textarea#payslip {
+  height: 5em;
+}
+#addOption {
+  width: 7em;
+  background-color: #4389a2;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+section.personal-info-1-3 {
+  margin-top: 10px;
+}
+.add-container {
+  padding: 9px;
+  display: flex;
+  justify-content: end;
+}
+
+textarea#notes {
+  width: 100%;
+  height: 20vh;
+}
+.footer {
+  display: flex;
+  justify-content: end;
+  gap: 1em;
+  margin: 10px;
+}
+.payment-header {
+  padding: 8px;
+  background-color: #182642;
+  color: white;
+}
+.roundedabout {
+  padding: 10px;
+}
+button#closeBtn {
+  background-color: #bbc0c9;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+button#addBtn {
+  background-color: #7893a5;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+input#nA,
+input#currency,
+input#salaryType,
+input#salaryPercentage {
+  background-color: #d8dbe0;
+  color: white;
+}
+input#default {
+  height: 1em;
+}
+
+textarea {
+  height: 4em;
+  padding: 5px 0 0 10px;
+  border: 1px solid rgba(0, 0, 0, 0.205);
+}
+dialog#modal {
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 0 auto;
+}
+#nA {
+  display: flex;
+  justify-content: end;
+}
+#phone {
+  appearance: none;
+  background-color: #fff;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding-left: 35px;
+  background-position: 5px center;
+  background-repeat: no-repeat;
+}
+
+.phone input[type="number"] {
+  margin-left: 10px;
+  padding: 8px;
+  width: 150px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+@media (max-width: 500px) {
+  .phone input[type="number"] {
+    width: 100%;
+    margin-left: 0;
+  }
+  label {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: start;
+  }
+  select#notch,
+  select#salaryGrade {
+    width: 100% !important;
+  }
+
+  textarea#notes {
+    width: 41em;
+  }
+}
+.personal-info-1-1,
+.personal-info-1-2 {
+  width: 100% !important;
+  height: 100%;
+}
+
+table {
+  width: 100%;
+  text-align: left;
+}
+
+th {
+  height: 2em;
+  color: #706f71;
+}
+.header {
+  background-color: #eff2f7;
+  margin-bottom: 1em;
+}
+button#deleteBtn {
+  background-color: red;
+  border: none;
+  color: white;
+  width: 42%;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.container-default {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  padding: 10px 0 0 10px;
+}
+.container1 {
+  display: flex;
+  place-self: flex-end;
+  width: 5em;
+  margin-right: 5em;
+}
+select#paymentMethod {
+  width: 29.5vw;
+}
+.upload {
+  padding: 5px 10px 5px 10px;
+  border-radius: 3px;
+  background-color: #4389a2;
+  color: white;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .personal-info-1,
+  .personal-info-2,
+  .personal-info-1-1,
+  .personal-info-1-2 {
+    width: 44.5vw !important;
+    height: 53vh !important;
+    padding: 0 0.5em 0 0.5em;
+  }
+  main {
+    height: 70vh;
+  }
+  textarea#payslip {
+    height: 5em;
+  }
+  label {
+    font-size: small;
+  }
+  .phone {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+  }
+  .phone input[type="number"] {
+    margin-left: 3px;
+    width: 111px;
+  }
+  dialog#modal {
+    width: 35em;
+  }
+  textarea#notes {
+    width: 96%;
+    height: 20vh;
+  }
+  div#tableContainer {
+    height: 45vh;
+    overflow: overlay;
+  }
+}
+@media (min-width: 1120px) {
+  .personal-info-1,
+  .personal-info-2 {
+    height: 52vh;
+  }
+  .personal-info-1-1,
+  .personal-info-1-2 {
+    height: 52vh;
+  }
+  body {
+    width: 95%;
+  }
+  main {
+    height: 70vh;
+  }
+  div#tableContainer {
+    height: 42vh;
+    overflow: overlay;
+  }
+  .btn {
+    width: 8em;
+  }
+}
+input#staffID {
+  background-color: #ebedef;
+  cursor: pointer;
+}
+#changeImage,
+#deleteImage {
+  display: none;
+  border: none;
+  border-radius: 4px;
+  color: white;
+}
+#changeImage {
+  background-color: blue;
+}
+#deleteImage {
+  background-color: red;
+}
+#displayedImage {
+  width: 6em;
+  display: none;
+  height: 8em;
+}
+div#imageContainer {
+  align-items: center;
+  display: flex;
+  padding: 0.5em;
+}
+.select2-container .select2-selection--single .select2-selection__rendered {
+  font-size: small !important;
+  overflow: visible !important;
+}
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__clear {
+  margin-right: 0px !important;
+}
+.value,
+.action {
+  text-align: center;
+}
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+  display: none;
+}
+.containers-pp {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+.ppp {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.containerssss {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+@media (max-width: 770px) {
+  .seventh-containers {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  .containers-pp {
+    display: grid;
+    grid-template-columns: 1fr !important;
+  }
+  #changeImage,
+  #deleteImage {
+    font-size: 10px;
+  }
+  .containerssss {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  #displayedImage {
+    height: 100%;
+  }
+}
+.toast {
+  visibility: hidden;
+  min-width: 250px;
+  margin: 0 auto;
+  background-color: #cb2020;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 16px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  transition: visibility 0s, opacity 0.5s linear;
+  opacity: 0;
+}
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+}

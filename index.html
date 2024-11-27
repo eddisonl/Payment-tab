@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="personal.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" type="jpeg" href="./img/persol.png" />
+
+    <title>Personal</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <p>Add Employee Details</p>
+      </header>
+      <!-- content on tabs -->
+      <section class="tabs" id="tabs">
+        <a id="personal" href="index.html"
+          ><button type="button" class="btn active">Personal</button></a
+        >
+        <a id="organizational" href="organizational.html"
+          ><button type="button" class="btn">Organizational</button>
+        </a>
+        <a id="payment-info" href="payment-info.html"
+          ><button type="button" class="btn">Payment Info</button>
+        </a>
+        <a id="other-info" href="other-info.html"
+          ><button type="button" class="btn">Other Info</button>
+        </a>
+        <a id="general-ledger" href="general-Ledger.html"
+          ><button type="button" class="btn">General Ledger</button>
+        </a>
+      </section>
+      <!-- ends here -->
+      <div class="all-sections">
+        <!-- content on left side -->
+        <section class="personal-info-1">
+          <!-- first div -->
+          <div class="containers">
+            <div class="container">
+              <label for="title">Title</label>
+              <select id="title" placeholder="Select Title">
+                <option value="" disabled selected hidden>Select Title</option>
+                <option value="Mr">Mr</option>
+                <option value="Mrs">Mrs</option>
+                <option value="Miss">Miss</option>
+              </select>
+            </div>
+            <div class="container">
+              <label for="fname">
+                First Name <sup> <i class="fa-solid fa-asterisk"></i></sup
+              ></label>
+              <input
+                id="firstName"
+                type="text"
+                placeholder="Enter First Name"
+              />
+            </div>
+            <div class="container">
+              <label for="lname">
+                Last Name <sup> <i class="fa-solid fa-asterisk"></i></sup
+              ></label>
+              <input id="lastName" type="text" placeholder="Enter Last Name" />
+            </div>
+          </div>
+          <!-- ends here -->
+
+          <!-- second div -->
+          <div class="containers">
+            <div class="container">
+              <label for="othernames"> Other Names</label>
+              <input
+                id="otherNames"
+                type="text"
+                placeholder="Enter Other Names"
+              />
+            </div>
+
+            <div class="container">
+              <label for="gender"
+                >Gender <sup><i class="fa-solid fa-asterisk"></i></sup
+              ></label>
+              <select id="gender" placeholder="Select Gender">
+                <option value="" disabled selected hidden>Select Gender</option>
+                <option value="None">None</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+            </div>
+
+            <div class="container">
+              <label for="lname"
+                >Date Of Birth <sup><i class="fa-solid fa-asterisk"></i></sup
+              ></label>
+              <input id="dob" type="date" />
+            </div>
+          </div>
+          <!-- ends here -->
+
+          <!-- third div -->
+          <div class="containers">
+            <div class="container">
+              <label for="mstatus">
+                Marriage Status <sup><i class="fa-solid fa-asterisk"></i></sup
+              ></label>
+
+              <select
+                name="status"
+                id="marriageStatus"
+                placeholder="Select Marital Status"
+              >
+                <option value="" disabled selected hidden>
+                  Select Marital Status
+                </option>
+                <option value="Married">Married</option>
+                <option value="Single">Single</option>
+              </select>
+            </div>
+          </div>
+          <!-- ends here -->
+
+          <!-- line to bottom of this section -->
+          <div class="line-separation">
+            <p1>Contact Info</p1>
+          </div>
+          <!-- ends here -->
+
+          <!--fourth div -->
+          <div class="containers">
+            <div class="container">
+              <label for="Email">
+                Email Address <sup> <i class="fa-solid fa-asterisk"></i></sup
+              ></label>
+              <input
+                type="email"
+                id="emailAddress"
+                placeholder="Enter Email Address"
+              />
+            </div>
+
+            <div class="phone-form">
+              <div class="container">
+                <div class="phone">
+                  <label for="phone">Phone:</label>
+                  <input
+                    id="phone"
+                    type="tel"
+                    placeholder="Enter phone number"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="containers">
+              <div class="container">
+                <label for="dgAddress">Digital Address</label>
+                <input
+                  type="text"
+                  name="digiAddress"
+                  id="digitalAddress"
+                  placeholder="Enter Digital Address"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- ends here -->
+          <div class="text-containers">
+            <div class="container">
+              <label for="homeAddress">Home Address</label>
+              <textarea
+                name=""
+                id="homeAddress"
+                placeholder="Enter Home Address"
+              ></textarea>
+            </div>
+          </div>
+        </section>
+        <!-- ends here -->
+        <section class="personal-info-2">
+          <!-- sixth div -->
+          <div class="containers">
+            <div class="container">
+              <label for="cname"
+                >Country <sup><i class="fa-solid fa-asterisk"></i></sup
+              ></label>
+              <select name="country" id="country" class="searchbar">
+                <option value="" disabled selected hidden>
+                  Select country
+                </option>
+                <option value="Ghana">Ghana</option>
+                <option value="Nigeria">Nigeria</option>
+                <option value="Togo">Togo</option>
+              </select>
+            </div>
+
+            <div class="container">
+              <label for="nationality"
+                >Nationality <sup><i class="fa-solid fa-asterisk"></i></sup
+              ></label>
+              <select
+                name="nationality"
+                id="nationality"
+                placeholder="Select Nationality"
+                class="searchbar"
+              >
+                <option value="" disabled selected hidden>
+                  Select Nationality
+                </option>
+                <option value="Ghanaian">Ghanaian</option>
+                <option value="Nigerian">Nigerian</option>
+                <option value="Togolese">Togolese</option>
+              </select>
+            </div>
+          </div>
+          <!-- ends here -->
+
+          <!-- seventh div -->
+          <div class="seventh-containers">
+            <div class="container">
+              <label for="natioanalId"> National ID</label>
+              <input
+                class="searchbar"
+                type="number"
+                name="idnumber"
+                id="nationalID"
+                placeholder="Enter National ID"
+              />
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" name="resident" id="resident" />
+              <label for="resident">Resident</label>
+            </div>
+          </div>
+          <!-- ends here -->
+
+          <!-- line to bottom of this section -->
+          <div class="line-separation">
+            <p1>Employee image</p1>
+          </div>
+          <!-- ends here -->
+
+          <!-- eight div -->
+          <div class="containers">
+            <div class="container">
+              <label for="profilepicture">Profile Picture</label>
+
+              <form action="/action_page.php">
+                <div class="upload">
+                  <label for="myFile"
+                    ><i class="fa-solid fa-camera"></i> Upload Image
+                  </label>
+                  <input
+                    type="file"
+                    id="myFile"
+                    name="filename"
+                    accept="image/*"
+                  />
+                </div>
+
+                <div id="imageContainer">
+                  <img id="displayedImage" alt="Uploaded Image" />
+                </div>
+                <button id="changeImage">Change</button>
+                <button id="deleteImage">Delete</button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="containers">
+        <p>
+          <i
+            >All fields marked with asterisk are required (
+            <i class="fa-solid fa-asterisk"></i>
+            )</i
+          >
+        </p>
+      </div>
+
+      <div class="buttons">
+        <button id="cancel" type="button">
+          <i class="fa-solid fa-xmark"></i> Cancel
+        </button>
+        <button id="reset" type="button">
+          <i class="fa-solid fa-rotate-right"></i> Reset
+        </button>
+        <button id="save" type="button">
+          <i class="fa-regular fa-floppy-disk"></i> Save
+        </button>
+      </div>
+    </footer>
+  </body>
+  <script src="index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validation with Toasts</title>
+    <style>
+      .toast {
+        visibility: hidden;
+        min-width: 250px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        border-radius: 4px;
+        padding: 16px;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+        transition: visibility 0s, opacity 0.5s linear;
+        opacity: 0;
+      }
+      .toast.show {
+        visibility: visible;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Validation Example with Toasts</h1>
+
+    <!-- Input Fields -->
+    <input type="email" id="email" placeholder="Enter Email" />
+    <input type="text" id="name" placeholder="Enter Name" />
+    <input type="text" id="phone" placeholder="Enter Phone Number" />
+    <button onclick="validateFields()">Save</button>
+
+    <!-- Toast Containers -->
+    <div id="toast" class="toast"></div>
+    <div id="toast-2" class="toast"></div>
+
+    <script>
+      // Utility function to show toast
+      function showToast(message, elementId = "toast", delay = 0) {
+        setTimeout(() => {
+          const toast = document.getElementById(elementId);
+          toast.textContent = message;
+          toast.classList.add("show");
+
+          // Hide the toast after 3 seconds
+          setTimeout(() => {
+            toast.classList.remove("show");
+          }, 3000);
+        }, delay);
+      }
+
+      // Validate email format
+      function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+      }
+
+      // Check if other required fields are filled
+      function areRequiredFieldsFilled() {
+        const name = document.getElementById("name").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        return name && phone; // Returns true if both fields are filled
+      }
+
+      // Validate fields on Save button click
+      function validateFields() {
+        const email = document.getElementById("email").value.trim();
+        const emailIsValid = isValidEmail(email);
+        const fieldsAreValid = areRequiredFieldsFilled();
+
+        if (!fieldsAreValid) {
+          // If required fields (name, phone) are empty
+          showToast("Please fill out all required fields", "toast-2", 0);
+        }
+
+        // Check email validation after a delay if fields are not filled
+        setTimeout(
+          () => {
+            if (!email) {
+              // If email is empty
+              showToast("Please fill out the email area", "toast", 0);
+            } else if (!emailIsValid) {
+              // If email is invalid
+              showToast("Invalid email address", "toast", 0);
+            }
+          },
+          fieldsAreValid ? 0 : 3000
+        ); // Delay the email toast if fields are missing
+
+        if (fieldsAreValid && emailIsValid) {
+          // All validations passed, proceed to save logic
+          showToast("Data saved successfully!", "toast");
+          console.log("Data saved:", {
+            email,
+            name: document.getElementById("name").value,
+            phone: document.getElementById("phone").value
+          });
+        }
+      }
+    </script>
+  </body>
+</html>

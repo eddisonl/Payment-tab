@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="personal.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" type="jpeg" href="./img/persol.png" />
+    <title>Employee Details</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <p>Add Employee Details</p>
+      </header>
+      <div>
+        <!-- Tabs Section -->
+        <section class="tabs" id="tabs">
+          <button
+            type="button"
+            class="btn active"
+            onclick="showTab('personal')"
+          >
+            Personal
+          </button>
+          <button type="button" class="btn" onclick="showTab('organizational')">
+            Organizational
+          </button>
+          <button type="button" class="btn" onclick="showTab('payment-info')">
+            Payment Info
+          </button>
+          <button type="button" class="btn" onclick="showTab('other-info')">
+            Other Info
+          </button>
+          <button type="button" class="btn" onclick="showTab('general-ledger')">
+            General Ledger
+          </button>
+        </section>
+
+        <!-- Tab Content Section -->
+
+        <!-- Personal Tab -->
+        <section id="personal" class="tab-content">
+          <div class="all-sections">
+            <!-- content on left side -->
+            <section class="personal-info-1">
+              <div class="ppp">
+                <!-- first div -->
+                <div class="containers">
+                  <div class="container">
+                    <label for="title">Title</label>
+                    <select id="title" placeholder="Select Title">
+                      <option value="" disabled selected hidden>
+                        Select Title
+                      </option>
+                      <option value="Mr">Dr</option>
+                      <option value="Mr">Mr</option>
+                      <option value="Mrs">Mrs</option>
+                      <option value="Miss">Miss</option>
+                      <option value="Miss">Prof</option>
+                    </select>
+                  </div>
+                  <div class="container">
+                    <label for="fname">
+                      First Name <sup> <i class="fa-solid fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      id="firstName"
+                      class="error-conatiner"
+                      type="text"
+                      placeholder="Enter First Name"
+                    />
+                    <div class="error-message" id="firstNameError">
+                      Input not filled
+                    </div>
+                  </div>
+                  <div class="container">
+                    <label for="lname">
+                      Last Name <sup> <i class="fa-solid fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      id="lastName"
+                      class="error-conatiner"
+                      type="text"
+                      placeholder="Enter Last Name"
+                    />
+                    <div class="error-message" id="secondNameError">
+                      Input not filled
+                    </div>
+                  </div>
+                </div>
+                <!-- ends here -->
+
+                <!-- second div -->
+                <div class="containers">
+                  <div class="container">
+                    <label for="othernames"> Other Names</label>
+                    <input
+                      id="otherNames"
+                      type="text"
+                      placeholder="Enter Other Names"
+                    />
+                  </div>
+
+                  <div class="container">
+                    <label for="gender"
+                      >Gender <sup><i class="fa-solid fa-asterisk"></i></sup
+                    ></label>
+                    <select
+                      id="gender"
+                      class="error-conatiner"
+                      placeholder="Select Gender"
+                    >
+                      <option value="" disabled selected hidden>
+                        Select Gender
+                      </option>
+                      <option value="None">None</option>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                    </select>
+                    <div class="error-message" id="genderError">
+                      Input not filled
+                    </div>
+                  </div>
+
+                  <div class="container">
+                    <label for="lname"
+                      >Date Of Birth
+                      <sup><i class="fa-solid fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      name="date"
+                      id="dob"
+                      type="date"
+                      class="error-conatiner"
+                    />
+                    <div class="error-message" id="dobError">
+                      Input not filled
+                    </div>
+                  </div>
+                </div>
+                <!-- ends here -->
+
+                <!-- third div -->
+                <div class="containers">
+                  <div class="container">
+                    <label for="mstatus">
+                      Marriage Status
+                      <sup><i class="fa-solid fa-asterisk"></i></sup
+                    ></label>
+
+                    <select
+                      name="status"
+                      id="marriageStatus"
+                      class="error-conatiner"
+                      placeholder="Select Marital Status"
+                    >
+                      <option value="" disabled selected hidden>
+                        Select Marital Status
+                      </option>
+                      <option value="Married">Married</option>
+                      <option value="Single">Single</option>
+                    </select>
+                    <div class="error-message" id="marriageStatusError">
+                      Input not filled
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ends here -->
+
+              <!-- line to bottom of this section -->
+              <div class="line-separation">
+                <p1>Contact Info</p1>
+              </div>
+              <!-- ends here -->
+
+              <!--fourth div -->
+              <div class="containers">
+                <div class="container">
+                  <label for="Email">
+                    Email Address
+                    <sup> <i class="fa-solid fa-asterisk"></i></sup
+                  ></label>
+                  <input
+                    type="email"
+                    id="emailAddress"
+                    class="error-conatiner"
+                    placeholder="Enter Email Address"
+                  />
+                  <div class="toast" id="toast">Input not filled</div>
+                </div>
+
+                <div class="phone-form">
+                  <div class="container">
+                    <div class="phone">
+                      <label for="phone"
+                        >Phone <sup> <i class="fa-solid fa-asterisk"></i></sup
+                      ></label>
+                      <input
+                        id="phone"
+                        class="error-conatiner"
+                        type="tel"
+                        placeholder="Enter phone number"
+                      />
+                      <div class="error-message" id="phoneError">
+                        Input not filled
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="container">
+                  <label for="dgAddress">Digital Address</label>
+                  <input
+                    type="text"
+                    name="digiAddress"
+                    id="digitalAddress"
+                    placeholder="Enter Digital Address"
+                  />
+                </div>
+              </div>
+              <!-- ends here -->
+              <div class="text-containers">
+                <div class="container">
+                  <label for="homeAddress">Home Address</label>
+                  <textarea
+                    name=""
+                    id="homeAddress"
+                    placeholder="Enter Home Address"
+                  ></textarea>
+                </div>
+              </div>
+            </section>
+            <!-- ends here -->
+            <section class="personal-info-2">
+              <!-- sixth div -->
+              <div class="ppp">
+                <div class="containers-pp">
+                  <div class="container">
+                    <label for="cname"
+                      >Country <sup><i class="fa-solid fa-asterisk"></i></sup
+                    ></label>
+                    <select class="error-conatiner" name="country" id="country">
+                      <option value="" disabled selected hidden>
+                        Select country
+                      </option>
+                      <option value="Ghana">Ghana</option>
+                      <option value="Nigeria">Nigeria</option>
+                      <option value="Togo">Togo</option>
+                    </select>
+                    <div class="error-message" id="countryError">
+                      Input not filled
+                    </div>
+                  </div>
+
+                  <div class="container">
+                    <label for="nationality"
+                      >Nationality
+                      <sup><i class="fa-solid fa-asterisk"></i></sup
+                    ></label>
+                    <select
+                      class="error-conatiner"
+                      name="nationality"
+                      id="nationality"
+                      placeholder="Select Nationality"
+                    >
+                      <option value="" disabled selected hidden>
+                        Select Nationality
+                      </option>
+                      <option value="Ghanaian">Ghanaian</option>
+                      <option value="Nigerian">Nigerian</option>
+                      <option value="Togolese">Togolese</option>
+                    </select>
+                    <div class="error-message" id="nationalityError">
+                      Input not filled
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ends here -->
+
+                <!-- seventh div -->
+                <div class="seventh-containers">
+                  <div class="container">
+                    <label for="natioanalId"> National ID</label>
+                    <input
+                      type="text"
+                      name="idnumber"
+                      id="nationalID"
+                      placeholder="Enter National ID"
+                    />
+                  </div>
+                  <div class="checkbox">
+                    <input type="checkbox" name="resident" id="resident" />
+                    <label for="resident">Resident</label>
+                  </div>
+                </div>
+              </div>
+              <!-- ends here -->
+
+              <!-- line to bottom of this section -->
+              <div class="line-separation">
+                <p1>Employee image</p1>
+              </div>
+              <!-- ends here -->
+
+              <!-- eight div -->
+              <div class="containerssss">
+                <div class="container">
+                  <label for="profilepicture">Profile Picture</label>
+
+                  <form action="/action_page.php">
+                    <div class="upload">
+                      <label for="myFile"
+                        ><i class="fa-solid fa-camera"></i> Upload Image
+                      </label>
+                      <input
+                        type="file"
+                        id="myFile"
+                        name="filename"
+                        accept="image/*"
+                      />
+                    </div>
+
+                    <div id="imageContainer">
+                      <img id="displayedImage" alt="Uploaded Image" />
+                    </div>
+                    <div class="butt">
+                      <button type="button" id="changeImage">Change</button>
+                      <button type="button" id="deleteImage">Delete</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <!-- Organizational Tab -->
+        <section id="organizational" class="tab-content" style="display: none">
+          <div class="all-sections">
+            <!-- content on left side -->
+            <section class="personal-info-1">
+              <!-- first div -->
+              <div class="containers-pp">
+                <div class="container">
+                  <label for="title"
+                    >STAFF ID <sup><i class="fa-solid fa-asterisk"></i></sup
+                  ></label>
+                  <input
+                    class="error-conatiner"
+                    id="staffID"
+                    type="text"
+                    placeholder="AUTO GENERATE ID"
+                    readonly
+                    onclick="generateStaffID()"
+                  />
+                  <div class="error-message" id="staffIDError">
+                    Input not filled
+                  </div>
+                </div>
+
+                <div class="container">
+                  <label for="hiredate"
+                    >Hire Date <sup><i class="fa-solid fa-asterisk"></i></sup
+                  ></label>
+                  <input
+                    class="error-conatiner"
+                    id="date"
+                    type="date"
+                    name="date"
+                    placeholder="hire Date"
+                  />
+                  <div class="error-message" id="hireError">
+                    Input not filled
+                  </div>
+                </div>
+              </div>
+              <!-- ends here -->
+              <!-- line to bottom of this section -->
+              <div class="line-separation">
+                <p1>Segments</p1>
+              </div>
+              <!-- ends here -->
+              <!-- second div -->
+              <div class="containers">
+                <div class="container">
+                  <label for="section">Section </label>
+                  <select id="section" placeholder="Select section">
+                    <option value="" disabled selected hidden>
+                      Select section
+                    </option>
+                    <option value="section1">...</option>
+                    <option value="section2">...</option>
+                    <option value="section3">...</option>
+                  </select>
+                </div>
+
+                <div class="container">
+                  <label for="department"
+                    >Department <sup><i class="fa-solid fa-asterisk"></i></sup
+                  ></label>
+                  <select
+                    id="department"
+                    class="error-conatiner"
+                    placeholder="Select department"
+                  >
+                    <option value="" disabled selected hidden>
+                      Select department
+                    </option>
+                    <option value="SI">System Integration</option>
+                    <option value="software">Software</option>
+                    <option value="consulting">Consulting</option>
+                    <option value="finance">Finance</option>
+                    <option value="front Desk">Front Desk</option>
+                  </select>
+                  <div class="error-message" id="departmentError">
+                    Input not filled
+                  </div>
+                </div>
+
+                <div class="container">
+                  <label for="mstatus"> Division</label>
+                  <select
+                    name="division"
+                    id="division"
+                    placeholder="Select Division"
+                  >
+                    <option value="" disabled selected hidden>
+                      Select Division
+                    </option>
+                    <option value="div1">...</option>
+                    <option value="div2">...</option>
+                  </select>
+                </div>
+              </div>
+              <!-- ends here -->
+
+              <!-- third div -->
+              <div class="containers">
+                <div class="container">
+                  <label for="employeeType">
+                    Employee Type <sup><i class="fa-solid fa-asterisk"></i></sup
+                  ></label>
+                  <select
+                    name="employType"
+                    id="employeeType"
+                    class="error-conatiner"
+                    placeholder="Select Employee Type"
+                  >
+                    <option value="" disabled selected hidden>
+                      Select Employee Type
+                    </option>
+                    <option value="ft">Full time</option>
+                    <option value="contract">Contract</option>
+                    <option value="quarterly">Quarterly</option>
+                  </select>
+                  <div class="error-message" id="employeeError">
+                    Input not filled
+                  </div>
+                </div>
+
+                <div class="container">
+                  <label for="position"> Position</label>
+                  <select
+                    name="postName"
+                    id="position"
+                    placeholder="Select Position"
+                  >
+                    <option value="" disabled selected hidden>
+                      Select Position
+                    </option>
+                    <option value="ceo">CEO</option>
+                    <option value="#manager">Manager</option>
+                    <option value="AsstManager">Asst.Manager</option>
+                    <option value="worker">Worker</option>
+                    <option value="nsp">NSS Personnel</option>
+                    <option value="intern">Intern</option>
+                  </select>
+                </div>
+
+                <div class="container">
+                  <label for="unit"> Unit</label>
+                  <select name="unit" id="unit" placeholder="Select Unit">
+                    <option value="" disabled selected hidden>
+                      Select Unit
+                    </option>
+                    <option value="unit1">Unit 1</option>
+                    <option value="unit2">Unit 2</option>
+                    <option value="unit3">Unit 3</option>
+                    <option value="unit4">Unit 4</option>
+                    <option value="unit5">Unit 5</option>
+                    <option value="unit6">Unit 6</option>
+                  </select>
+                </div>
+              </div>
+              <!-- ends here -->
+
+              <!--fourth div -->
+              <div class="containers">
+                <div class="container">
+                  <label for="location"> Location</label>
+                  <select
+                    name="location"
+                    id="location"
+                    placeholder="Select Location"
+                  >
+                    <option value="" disabled selected hidden>
+                      Select Location
+                    </option>
+                    <option value="persol">Persol</option>
+                    <option value="liberte">Liberte pay</option>
+                    <option value="sdw">SDW</option>
+                  </select>
+                </div>
+              </div>
+              <!-- ends here -->
+            </section>
+            <!-- ends here -->
+            <section class="personal-info-2">
+              <!-- sixth div -->
+              <div class="containers">
+                <div class="container">
+                  <label for="taxName"
+                    >Tax Option <sup><i class="fa-solid fa-asterisk"></i></sup
+                  ></label>
+                  <select
+                    class="error-conatiner"
+                    name="taxOption"
+                    id="taxOption"
+                    placeholder="Select Tax Option"
+                  >
+                    <option value="" disabled selected hidden>
+                      Select Tax Option
+                    </option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                  </select>
+                  <div class="error-message" id="taxOptError">
+                    Input not filled
+                  </div>
+                </div>
+
+                <div class="container">
+                  <label for="employOption">Employment Option</label>
+                  <select
+                    name="options"
+                    id="employmentOptions"
+                    placeholder="Select Permanent"
+                  >
+                    <option value="" disabled selected hidden>
+                      Select Permanent
+                    </option>
+                    <option value="ghana">Permanent</option>
+                    <option value="nigeria">Contract</option>
+                    <option value="togo">Quarterly</option>
+                    <option value="togo">Annual</option>
+                  </select>
+                </div>
+
+                <div class="checkboxes">
+                  <input type="checkbox" name="overtime" id="overtimeExempt" />
+                  <label for="overtime-text">Overtime Exempt</label>
+                </div>
+              </div>
+              <!-- ends here -->
+
+              <!-- line to bottom of this section -->
+              <div class="line-separation">
+                <p1>Salary Info</p1>
+              </div>
+              <!-- ends here -->
+
+              <!-- seventh div -->
+              <div class="seventh-containers">
+                <div class="container">
+                  <label for="salaryGrade"
+                    >Salary Grade <sup><i class="fa-solid fa-asterisk"></i></sup
+                  ></label>
+                  <select
+                    class="error-conatiner"
+                    name="salaryGrade"
+                    id="salaryGrade"
+                    onchange="enableFields()"
+                    placeholder="Select Salary Grade"
+                  >
+                    <option value="" disabled selected hidden>
+                      Select Salary Grade
+                    </option>
+                    <option value="sGrade1">Grade 1</option>
+                    <option value="sGrade2">Grade 2</option>
+                    <option value="sGrade3">Grade 3</option>
+                    <option value="sGrade4">Grade 4</option>
+                    <option value="sGrade5">Grade 5</option>
+                  </select>
+                  <div class="error-message" id="salaryGradeError">
+                    Input not filled
+                  </div>
+                </div>
+
+                <div class="container">
+                  <label for="salaryNotch">Notch </label>
+                  <select
+                    name="notch"
+                    id="notch"
+                    placeholder="Select Notch"
+                    disabled
+                  >
+                    <option value="" disabled selected hidden>
+                      Select Notch
+                    </option>
+                    <option value="1-1">Grade 1 - Notch 1</option>
+                    <option value="1-2">Grade 1 - Notch 2</option>
+                    <option value="1-3">Grade 1 - Notch 3</option>
+                    <option value="2-1">Grade 2 - Notch 1</option>
+                    <option value="2-2">Grade 2 - Notch 2</option>
+                    <option value="2-3">Grade 2 - Notch 3</option>
+                    <option value="3-1">Grade 3 - Notch 1</option>
+                    <option value="3-2">Grade 3 - Notch 2</option>
+                    <option value="3-3">Grade 3 - Notch 3</option>
+                    <option value="4-1">Grade 4 - Notch 1</option>
+                    <option value="4-2">Grade 4 - Notch 2</option>
+                    <option value="4-3">Grade 4 - Notch 3</option>
+                    <option value="5-1">Grade 5 - Notch 1</option>
+                    <option value="5-2">Grade 5 - Notch 2</option>
+                    <option value="5-3">Grade 5 - Notch 3</option>
+                  </select>
+                </div>
+              </div>
+              <!-- ends here -->
+
+              <!-- eight div -->
+              <div class="containers">
+                <div class="container">
+                  <label for="currency">Currency</label>
+                  <input
+                    type="text"
+                    disabled=""
+                    name="currency"
+                    id="currency"
+                  />
+                </div>
+                <div class="container">
+                  <label for="currency">Salary Type</label>
+                  <input
+                    type="text"
+                    disabled=""
+                    name="salaryType"
+                    id="salaryType"
+                  />
+                </div>
+                <div class="container">
+                  <label for="rate">Rate</label>
+                  <input type="number" name="rate" id="rate" placeholder="0" />
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <!-- Payment Info Tab -->
+        <section id="payment-info" class="tab-content" style="display: none">
+          <section class="personal-info-1-3">
+            <div class="add-container">
+              <button id="addOption" type="button">
+                <i class="fa-solid fa-plus"></i> Add Option
+              </button>
+            </div>
+            <div class="dialog-container">
+              <dialog class="modal" , id="modal">
+                <div class="payment-header"><p1>Add Payment Info</p1></div>
+
+                <div class="container-default">
+                  <div class="container">
+                    <label for="paymentOp">Payment Option</label>
+                    <select name="paymentMethod" id="paymentMethod">
+                      <option value="" disabled selected hidden>
+                        Select Payment Option
+                      </option>
+                      <option value="bank">Bank</option>
+                      <option value="MoMo">Mobile Money</option>
+                      <option value="Cash">Cash</option>
+                    </select>
+
+                    <!-- Other fields that will change based on selection -->
+                    <!-- <div id="additionalFields"></div> -->
+                  </div>
+
+                  <div class="container1">
+                    <input type="checkbox" name="default" id="default" />
+                    <label for="deffault">Default</label>
+                  </div>
+                </div>
+                <div class="roundedabout">
+                  <div class="containerssss">
+                    <div class="container">
+                      <label for="bankOptions"
+                        >Bank <sup> <i class="fa-solid fa-asterisk"></i></sup
+                      ></label>
+                      <select name="bank" class="branch" id="bankOptions">
+                        <option value="" disabled selected hidden>
+                          Select bank
+                        </option>
+                        <option value="CalBank">CalBank</option>
+                        <option value="EcoBank">EcoBank</option>
+                        <option value="Zenith Bank">Zenith Bank</option>
+                      </select>
+                    </div>
+
+                    <div class="container">
+                      <label for="branch"
+                        >Branch <sup> <i class="fa-solid fa-asterisk"></i></sup
+                      ></label>
+                      <select name="branch" class="branch" id="branchOptions">
+                        <option value="" disabled selected hidden>
+                          Select Branch
+                        </option>
+                        <option value="ug">UG</option>
+                        <option value="elegon">East Legon</option>
+                        <option value="madina">Madina</option>
+                        <option value="motown">Achimota</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="containers">
+                    <div class="container">
+                      <label for="accountNo"
+                        >Account Number
+                        <sup><i class="fa-solid fa-asterisk"></i></sup
+                      ></label>
+                      <input
+                        type="number"
+                        class="three-items"
+                        name="accountNumber"
+                        id="accountNumber"
+                        minlength="1"
+                        maxlength="17"
+                        placeholder="Enter Account No."
+                      />
+                    </div>
+
+                    <div class="container">
+                      <label for="paymentOpt"
+                        >Payment Basis
+                        <sup><i class="fa-solid fa-asterisk"></i></sup
+                      ></label>
+                      <select
+                        name="paymentOpt"
+                        class="three-items"
+                        id="paymentBase"
+                      >
+                        <option value="#" disabled selected hidden>
+                          Select Payment Basis
+                        </option>
+                        <option value="#">...</option>
+                        <option value="#">...</option>
+                        <option value="#">...</option>
+                        <option value="#">...</option>
+                      </select>
+                    </div>
+
+                    <div class="container">
+                      <label for="paymentOpt"
+                        >NA <sup><i class="fa-solid fa-asterisk"></i></sup
+                      ></label>
+                      <input
+                        type="text"
+                        name="NA"
+                        class="three-items"
+                        disabled=""
+                        id="nA"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="containerss">
+                    <div class="container">
+                      <label for="note">Note</label>
+                      <textarea name="notes" id="notes"></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="footer">
+                  <button type="button" id="closeBtn">
+                    <i class="fa-solid fa-xmark"></i> close
+                  </button>
+                  <button type="button" id="addBtn" onclick="addItem()">
+                    <i class="fa-regular fa-floppy-disk"></i> Add
+                  </button>
+                </div>
+              </dialog>
+            </div>
+            <!-- line to bottom of this section -->
+            <div id="tableContainer"></div>
+            <!-- ends here -->
+          </section>
+        </section>
+
+        <!-- Other Info Tab -->
+        <section id="other-info" class="tab-content" style="display: none">
+          <div class="all-sections">
+            <!-- content on left side -->
+            <section class="personal-info-1-1">
+              <!-- line to bottom of this section -->
+              <div class="line-separation">
+                <p1>salary Info</p1>
+              </div>
+              <!-- ends here -->
+              <!-- first div -->
+              <div class="containerssss">
+                <div class="container">
+                  <label for="payroll-hours">Payroll hours</label>
+                  <select
+                    name="payroll-hours"
+                    id="payrollHours"
+                    onchange="enableFields()"
+                    placeholder="Select Payroll Hours"
+                  >
+                    <option value="-1">Select Payroll hours</option>
+                    <option value="1hour">1hour</option>
+                    <option value="6hours">6hours</option>
+                    <option value="8hours">8hours</option>
+                  </select>
+                </div>
+
+                <div class="container">
+                  <label for="salacry-percentage"
+                    >Percentage Of Basic Salary</label
+                  >
+                  <input
+                    class="searchbar"
+                    disabled=""
+                    disabled
+                    id="salaryPercentage"
+                    type="number"
+                    placeholder="0.00"
+                  />
+                </div>
+              </div>
+              <!-- ends here -->
+              <!-- second div -->
+              <div class="containerss">
+                <div class="container">
+                  <label for="payslip">Payslip Note </label>
+                  <textarea
+                    name="payslip"
+                    id="payslip"
+                    placeholder="Note"
+                  ></textarea>
+                </div>
+              </div>
+              <!-- ends here -->
+            </section>
+            <!-- ends here -->
+            <section class="personal-info-1-2"></section>
+          </div>
+        </section>
+
+        <!-- General Ledger Tab -->
+        <section id="general-ledger" class="tab-content" style="display: none">
+          <div class="all-sections">
+            <!-- content on left side -->
+            <section class="personal-info-1-1">
+              <!-- line to bottom of this section -->
+              <div class="line-separation">
+                <p1>Regular</p1>
+              </div>
+              <!-- ends here -->
+              <!-- first div -->
+              <div class="containerssss">
+                <div class="container" class="category">
+                  <label for="salarySearch">Salary</label>
+                  <select class="gl-dropdown" id="salaryGL" id="salarySearch">
+                    <option value="" disable hidden>Search GL</option>
+                    <option value="002">002 -Basic Salary</option>
+                    <option value="00251">00251 -General Deduction GL</option>
+                    <option value="0023">0023 -General Earnings GL</option>
+                    <option value="GL001">GL001 -Income</option>
+                    <option value="003">003 -Income Tax</option>
+                    <option value="101">001 -Net Salary</option>
+                    <option value="101">006 -Staff Loan</option>
+                    <option value="101">007 -Staff Loan Interest</option>
+                    <option value="101">004 -Tier 1 Saving</option>
+                  </select>
+                </div>
+
+                <div class="container">
+                  <label for="incomeTaxSearch">Income Tax</label>
+                  <select class="gl-dropdown" id="incomeTaxSearch">
+                    <option value="" disable hidden>Search GL</option>
+                    <option value="002">002 -Basic Salary</option>
+                    <option value="00251">00251 -General Deduction GL</option>
+                    <option value="0023">0023 -General Earnings GL</option>
+                    <option value="GL001">GL001 -Gross Income</option>
+                    <option value="003">003 -Income Tax</option>
+                    <option value="101">001 -Net Salary</option>
+                    <option value="101">006 -Staff Loan</option>
+                    <option value="101">007 -Staff Loan Interest</option>
+                    <option value="101">004 -Tier 1 Saving</option>
+                  </select>
+                </div>
+              </div>
+              <!-- ends here -->
+              <!-- second div -->
+              <div class="containerssss">
+                <div class="container">
+                  <label for="netSalarySearch">Net Salary Payable </label>
+                  <select class="gl-dropdown" id="netSalaryPayableSearch">
+                    <option value="" disable hidden>Search GL</option>
+                    <option value="002">002 -Basic Salary</option>
+                    <option value="00251">00251 -General Deduction GL</option>
+                    <option value="0023">0023 -General Earnings GL</option>
+                    <option value="GL001">GL001 -Gross Income</option>
+                    <option value="003">003 -Income Tax</option>
+                    <option value="101">001 -Net Salary</option>
+                    <option value="101">006 -Staff Loan</option>
+                    <option value="101">007 -Staff Loan Interest</option>
+                    <option value="101">004 -Tier 1 Saving</option>
+                  </select>
+                </div>
+
+                <div class="container">
+                  <label for="operatingOvertime">Operating Overtime</label>
+                  <select class="gl-dropdown" id="operatingOvertimeSearch">
+                    <option value="" disable hidden>Search GL</option>
+                    <option value="002">002 -Basic Salary</option>
+                    <option value="00251">00251 -General Deduction GL</option>
+                    <option value="0023">0023 -General Earnings GL</option>
+                    <option value="GL001">GL001 -Gross Income</option>
+                    <option value="003">003 -Income Tax</option>
+                    <option value="101">001 -Net Salary</option>
+                    <option value="101">006 -Staff Loan</option>
+                    <option value="101">007 -Staff Loan Interest</option>
+                    <option value="101">004 -Tier 1 Saving</option>
+                  </select>
+                </div>
+              </div>
+              <!-- ends here -->
+
+              <!-- third div -->
+              <div class="containerssss">
+                <div class="container">
+                  <label for="shiftAllowanceSearch">Shift Allowance</label>
+                  <select class="gl-dropdown" id="shiftAllowanceSearch">
+                    <option value="" disable hidden>Search GL</option>
+                    <option value="002">002 -Basic Salary</option>
+                    <option value="00251">00251 -General Deduction GL</option>
+                    <option value="0023">0023 -General Earnings GL</option>
+                    <option value="GL001">GL001 -Gross Income</option>
+                    <option value="003">003 -Income Tax</option>
+                    <option value="101">001 -Net Salary</option>
+                    <option value="101">006 -Staff Loan</option>
+                    <option value="101">007 -Staff Loan Interest</option>
+                    <option value="101">004 -Tier 1 Saving</option>
+                  </select>
+                </div>
+
+                <div class="container">
+                  <label for="taxReliefSearch">Tax Relief</label>
+                  <select class="gl-dropdown" id="taxReliefSearch">
+                    <option value="" disable hidden>Search GL</option>
+                    <option value="002">002 -Salary</option>
+                    <option value="00251">00251 -Deduction GL</option>
+                    <option value="0023">0023 -General Earnings GL</option>
+                    <option value="GL001">GL001 -Gross Income</option>
+                    <option value="003">003 -Income Tax</option>
+                    <option value="101">001 -Net Salary</option>
+                    <option value="101">006 -Staff Loan</option>
+                    <option value="101">007 -Staff Loan Interest</option>
+                    <option value="101">004 -Tier 1 Saving</option>
+                  </select>
+                </div>
+              </div>
+              <!-- ends here -->
+            </section>
+            <!-- ends here -->
+            <section class="personal-info-1-2">
+              <!-- sixth div -->
+              <div class="containerssss">
+                <div class="container">
+                  <!-- line to bottom of this section -->
+                  <div class="line-separation">
+                    <p1>Mandatory</p1>
+                  </div>
+                </div>
+                <!-- ends here -->
+                <div class="container">
+                  <!-- line to bottom of this section -->
+                  <div class="line-separation">
+                    <p1>Voluntary</p1>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ends here -->
+              <!-- fourth div -->
+              <div class="containerssss">
+                <div class="container">
+                  <label for="employeeContributionSearch"
+                    >Employee Contribution GL</label
+                  >
+                  <select class="gl-dropdown" id="employeeContributionSearch">
+                    <option value="" disable hidden>Search GL</option>
+                    <option value="002">002 -Basic Salary</option>
+                    <option value="00251">00251 -General Deduction GL</option>
+                    <option value="0023">0023 -General Earnings GL</option>
+                    <option value="GL001">GL001 -Gross Income</option>
+                    <option value="003">003 -Income Tax</option>
+                    <option value="101">001 -Net Salary</option>
+                    <option value="101">006 -Staff Loan</option>
+                    <option value="101">007 -Staff Loan Interest</option>
+                    <option value="101">004 -Tier 1 Saving</option>
+                  </select>
+                </div>
+
+                <div class="container">
+                  <label for="employeeContributionSearch"
+                    >Employee Contribution GL</label
+                  >
+                  <select class="gl-dropdown" id="employeeContributionSearch2">
+                    <option value="" disable hidden>Search GL</option>
+                    <option value="002">002 -Basic Salary</option>
+                    <option value="00251">00251 -General Deduction GL</option>
+                    <option value="0023">0023 -General Earnings GL</option>
+                    <option value="GL001">GL001 -Gross Income</option>
+                    <option value="003">003 -Income Tax</option>
+                    <option value="101">001 -Net Salary</option>
+                    <option value="101">006 -Staff Loan</option>
+                    <option value="101">007 -Staff Loan Interest</option>
+                    <option value="101">004 -Tier 1 Saving</option>
+                  </select>
+                </div>
+              </div>
+              <!-- ends here -->
+              <!-- ends here -->
+
+              <!-- fifth div -->
+              <div class="containerssss">
+                <div class="container">
+                  <label for="employerContributionSearch"
+                    >Employer Contribution GL</label
+                  >
+                  <select class="gl-dropdown" id="employerContributionSearch">
+                    <option value="" disable hidden>Search GL</option>
+                    <option value="002">002 -Basic Salary</option>
+                    <option value="00251">00251 -General Deduction GL</option>
+                    <option value="0023">0023 -General Earnings GL</option>
+                    <option value="GL001">GL001 -Gross Income</option>
+                    <option value="003">003 -Income Tax</option>
+                    <option value="101">001 -Net Salary</option>
+                    <option value="101">006 -Staff Loan</option>
+                    <option value="101">007 -Staff Loan Interest</option>
+                    <option value="101">004 -Tier 1 Saving</option>
+                  </select>
+                </div>
+
+                <div class="container">
+                  <label for="employerContributionSearch"
+                    >Employer Contribution GL</label
+                  >
+                  <select class="gl-dropdown" id="employerContributionSearch2">
+                    <option value="" disable hidden>Search GL</option>
+                    <option value="002">002 -Basic Salary</option>
+                    <option value="00251">00251 -General Deduction GL</option>
+                    <option value="0023">0023 -General Earnings GL</option>
+                    <option value="GL001">GL001 -Gross Income</option>
+                    <option value="003">003 -Income Tax</option>
+                    <option value="101">001 -Net Salary</option>
+                    <option value="101">006 -Staff Loan</option>
+                    <option value="101">007 -Staff Loan Interest</option>
+                    <option value="101">004 -Tier 1 Saving</option>
+                  </select>
+                </div>
+              </div>
+              <!-- ends here -->
+
+              <!-- sixth div -->
+              <div class="containerssss">
+                <div class="container">
+                  <label for="employerTotalSearch"
+                    >Employer Total Payable</label
+                  >
+                  <select class="gl-dropdown" id="employerTotalSearch">
+                    <option value="" disable hidden>Search GL</option>
+                    <option value="002">002 -Basic Salary</option>
+                    <option value="00251">00251 -General Deduction GL</option>
+                    <option value="0023">0023 -General Earnings GL</option>
+                    <option value="GL001">GL001 -Gross Income</option>
+                    <option value="003">003 -Income Tax</option>
+                    <option value="101">001 -Net Salary</option>
+                    <option value="101">006 -Staff Loan</option>
+                    <option value="101">007 -Staff Loan Interest</option>
+                    <option value="101">004 -Tier 1 Saving</option>
+                  </select>
+                </div>
+
+                <div class="container">
+                  <label for="employerTotalSearch"
+                    >Employer Total Payable</label
+                  >
+                  <select class="gl-dropdown" id="employerTotalSearch2">
+                    <option value="" disable hidden>Search GL</option>
+                    <option value="002">002 -Basic Salary</option>
+                    <option value="00251">00251 -General Deduction GL</option>
+                    <option value="0023">0023 -General Earnings GL</option>
+                    <option value="GL001">GL001 -Gross Income</option>
+                    <option value="003">003 -Income Tax</option>
+                    <option value="101">001 -Net Salary</option>
+                    <option value="101">006 -Staff Loan</option>
+                    <option value="101">007 -Staff Loan Interest</option>
+                    <option value="101">004 -Tier 1 Saving</option>
+                  </select>
+                </div>
+              </div>
+              <!-- ends here -->
+            </section>
+          </div>
+        </section>
+        <div class="toast" id="toast-2"></div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="containerss">
+        <p>
+          <i
+            >All fields marked with asterisk are required (<i
+              class="fa-solid fa-asterisk"
+            ></i
+            >)</i
+          >
+        </p>
+      </div>
+
+      <div class="buttons">
+        <button id="cancel" type="button">
+          <i class="fa-solid fa-xmark"></i> Cancel
+        </button>
+        <button id="reset" type="button">
+          <i class="fa-solid fa-rotate-right"></i> Reset
+        </button>
+        <button id="save" type="button">
+          <i class="fa-regular fa-floppy-disk"></i> Save
+        </button>
+      </div>
+    </footer>
+  </body>
+  <script src="combined-tabs.js"></script>
+</html>

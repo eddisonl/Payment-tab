@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="personal.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" type="jpeg" href="./img/persol.png" />
+
+    <title>Other Info</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <p>Add Employee Details</p>
+      </header>
+      <!-- content on tabs -->
+      <section class="tabs" id="tabs">
+        <a id="personal" href="index.html"
+          ><button type="button" class="btn">Personal</button></a
+        >
+        <a id="organizational" href="organizational.html"
+          ><button type="button" class="btn">Organizational</button>
+        </a>
+        <a id="payment-info" href="payment-info.html"
+          ><button type="button" class="btn">Payment Info</button>
+        </a>
+        <a id="other-info" href="other-info.html"
+          ><button type="button" class="btn active">Other Info</button>
+        </a>
+        <a id="general-ledger" href="general-Ledger.html"
+          ><button type="button" class="btn">General Ledger</button>
+        </a>
+      </section>
+      <!-- ends here -->
+      <div class="all-sections">
+        <!-- content on left side -->
+        <section class="personal-info-1-1">
+          <!-- line to bottom of this section -->
+          <div class="line-separation">
+            <p1>salary Info</p1>
+          </div>
+          <!-- ends here -->
+          <!-- first div -->
+          <div class="containers">
+            <div class="container">
+              <label for="payroll-hours">Payroll hours</label>
+              <select
+                class="searchbar"
+                name="payroll-hours"
+                id="payrollHours"
+                placeholder="Select Payroll Hours"
+              >
+                <option value="" disabled selected hidden>
+                  Select Payroll hours
+                </option>
+                <option value="1hour">1hour</option>
+                <option value="6hours">6hours</option>
+                <option value="8hours">8hours</option>
+              </select>
+            </div>
+
+            <div class="container">
+              <label for="salacry-percentage">Percentage Of Basic Salary</label>
+              <input
+                class="searchbar"
+                id="salaryPercentage"
+                type="number"
+                placeholder="0.00"
+              />
+            </div>
+          </div>
+          <!-- ends here -->
+          <!-- second div -->
+          <div class="containers">
+            <div class="container">
+              <label for="payslip">Payslip Note </label>
+              <textarea
+                name="payslip"
+                id="payslip"
+                placeholder="Note"
+              ></textarea>
+            </div>
+          </div>
+          <!-- ends here -->
+        </section>
+        <!-- ends here -->
+        <section class="personal-info-1-2"></section>
+      </div>
+    </main>
+    <footer>
+      <div class="containers">
+        <p>
+          <i
+            >All fields marked with asterisk are required (
+            <i class="fa-solid fa-asterisk"></i>
+            )</i
+          >
+        </p>
+      </div>
+
+      <div class="buttons">
+        <button id="cancel" type="button">
+          <i class="fa-solid fa-xmark"></i> Cancel
+        </button>
+        <button id="reset" type="button">
+          <i class="fa-solid fa-rotate-right"></i> Reset
+        </button>
+        <button id="save" type="button">
+          <i class="fa-regular fa-floppy-disk"></i> Save
+        </button>
+      </div>
+    </footer>
+  </body>
+  <script src="other-info.js"></script>
+</html>
